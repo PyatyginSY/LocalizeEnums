@@ -1,0 +1,15 @@
+﻿<Window x:Class="LocalizeEnums.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:prism="http://prismlibrary.com/"
+        prism:ViewModelLocator.AutoWireViewModel="True"
+        xmlns:core="clr-namespace:LocalizeEnums.Core;assembly=LocalizeEnums.Core"
+        xmlns:enums="clr-namespace:LocalizeEnums.Enums"
+        xmlns:local="clr-namespace:LocalizeEnums.Extensions"
+        Title="{Binding Title}" Height="350" Width="525" >
+    <Grid>
+
+        <ComboBox HorizontalAlignment="Left" Margin="220,158,0,0" VerticalAlignment="Top" Width="120" ItemsSource="{local:EnumBindingExtensions enums:Status}"/>
+
+    </Grid>
+</Window>

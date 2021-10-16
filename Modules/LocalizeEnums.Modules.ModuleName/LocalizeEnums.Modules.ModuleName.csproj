@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <AssemblyName>LocalizeEnums.Modules.ModuleName</AssemblyName>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Prism.Wpf" Version="8.1.97" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\LocalizeEnums.Core\LocalizeEnums.Core.csproj" />
+    <ProjectReference Include="..\..\Services\LocalizeEnums.Services.Interfaces\LocalizeEnums.Services.Interfaces.csproj" />
+  </ItemGroup>
+</Project>
