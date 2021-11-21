@@ -1,17 +1,29 @@
-﻿using System;
+﻿// <copyright file="EnumDescriptionTypeConverter.cs" company="Pyatygin S.Y.">
+// Copyright (c) Pyatygin S.Y.. All rights reserved.
+// </copyright>
+
+using System;
 using System.ComponentModel;
 using System.Globalization;
 using System.Reflection;
 
 namespace LocalizeEnums.Converter
 {
+    /// <summary>
+    /// EnumDescriptionTypeConverter.
+    /// </summary>
     public class EnumDescriptionTypeConverter : EnumConverter
     {
-        public EnumDescriptionTypeConverter(Type type) : base(type)
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EnumDescriptionTypeConverter"/> class.
+        /// </summary>
+        /// <param name="type">type.</param>
+        public EnumDescriptionTypeConverter(Type type)
+            : base(type)
         {
-
         }
 
+        /// <inheritdoc/>
         public override object ConvertTo(ITypeDescriptorContext context, CultureInfo culture, object value, Type destinationType)
         {
             if (destinationType == typeof(string))
@@ -26,6 +38,7 @@ namespace LocalizeEnums.Converter
                     }
                 }
             }
+
             return base.ConvertTo(context, culture, value, destinationType);
         }
     }

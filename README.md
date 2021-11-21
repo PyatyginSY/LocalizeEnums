@@ -1,2 +1,3 @@
 # LocalizeEnums
-How to Localize Enums in C#.
+
+A simple example showing how to localize Enums in WPF.
